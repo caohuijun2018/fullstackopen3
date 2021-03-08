@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Note = ({ note }) => {
+const Note = ({ note, toggleImportant }) => {
+  const lable = note.important ? 'make not important' : 'make important'
   return (
-    <li>{note.content}</li>
-  )
-}
+    <div>
+      <li>
+        {note.content}
+        
+      </li>
+    </div>
+  );
+};
 
-export default Note
+export default Note;

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import './App.css'
 import axios from 'axios'
+
+const url ='http://localhost:3001/persons'
 const App = () => {
   // const [persons, setPersons] = useState([
   //   { name: "Arto Hellas", number: "040-123456", id: 1 },
@@ -12,7 +14,7 @@ const App = () => {
   const [persons,setPersons] = useState([])
   
   useEffect( () => {
-    axios.get('http://localhost:3001/persons').then(response => {
+    axios.get(url).then(response => {
       setPersons(response.data)
     })
   },[])
@@ -25,9 +27,13 @@ const App = () => {
     const object = {
       //新添加的对象
       name: newName,
-      phone: newPhone,
+      number: newPhone,
       id: persons.length + 1,
     };
+
+    // axios.put(url).then(response => {
+    //   setPersons()
+    // })
     persons.map((person) =>
       person.name === newName
         ? alert(`${newName} is already added to phonebook`)
@@ -63,7 +69,7 @@ const App = () => {
           name: <input value={newName} onChange={handleChangeName} />
         </div>
         <div>
-          phone: <input value={newPhone} onChange={handleChangePhone} />
+          number: <input value={newPhone} onChange={handleChangePhone} />
         </div>
         <div>
           <button type="submit">add</button>
@@ -79,7 +85,7 @@ const App = () => {
         )
         .map((person) => (
           <p key={person.id}>
-            {person.name} {person.phone}
+            {person.name} {person.number}
           </p>
         ))}
     </div>
