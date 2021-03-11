@@ -4,9 +4,27 @@ import "./App.css";
 //import axios from "axios";
 import phoneBookService from "./service/phoneboook";
 //const url = "http://localhost:3001/persons";
+// import NotificationErr from './service/notification'
+// import NotificationSucc from './service/notification'
+
+const NotificationErr = ({ message }) => {
+  if (message === null) {
+    return null;
+  }
+
+  return <div className="error">{message}</div>;
+};
+const NotificationSucc = ({ message }) => {
+  if (message === null) {
+    return null;
+  }
+
+  return <div className="successful">{message}</div>;
+};
 const App = () => {
   const [persons, setPersons] = useState([]);
-
+  const [errMessage, setErrMessage] = useState(" some error ");
+  const [succMessage, setSuccMessage] = useState("");
   useEffect(() => {
     phoneBookService.getAll().then((returnPerson) => {
       setPersons(returnPerson);
@@ -27,6 +45,10 @@ const App = () => {
     const alreadyExit = persons.some((person) => person.name === object.name); //some返回一bollean型数据
     if (alreadyExit) {
       alert(`${newName} is already exited`);
+      setErrMessage(`${newName} is already exited`)
+      setTimeout(() => {
+        setErrMessage(null)
+      }, 5000);
       const phonePerson = persons.find(
         //找到需要被替代的人
         (person) => person.name === newName && person.phone !== newPhone
@@ -40,7 +62,7 @@ const App = () => {
         let flag = window.confirm(
           `${newName} is already exited,do you want to replace it?`
         );
-        
+
         if (flag === true) {
           upClick(changePerson);
         }
@@ -48,7 +70,13 @@ const App = () => {
     } else {
       phoneBookService
         .create(object)
-        .then((returnPerson) => setPersons(persons.concat(returnPerson)));
+        .then((returnPerson) => setPersons(persons.concat(returnPerson)))
+        
+          setSuccMessage(`${newName} added successful !`);
+          setTimeout(() => {
+            setSuccMessage(null);
+          }, 5000);
+        
     }
     setNewname("");
     setNewphone("");
@@ -63,11 +91,17 @@ const App = () => {
             person.id === changePerson.id ? returnPerson : person
           )
         );
-      });
+      }).catch(error => {
+        setErrMessage(`${changePerson.name} is already removed`)
+        setTimeout(() => {
+          setErrMessage(null)
+        }, (5000));
+      })
   };
 
   const delPerson = (person) => {
     let flag = window.confirm(`Delete ${person.name} ?`);
+    
     if (flag) {
       phoneBookService.deleteId(person.id).then(() => {
         phoneBookService
@@ -97,6 +131,7 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
+      <NotificationErr message={errMessage} />
       <h1>Test</h1>
       <form>
         filter show with{" "}
@@ -134,6 +169,7 @@ const App = () => {
               </p>
             </div>
           ))}
+      <NotificationSucc message={succMessage} />
     </div>
   );
 };

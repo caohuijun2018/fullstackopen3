@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import Note from "./components/Node";
 //import axios from "axios";
 import noteServices from "./services/note";
+import Notification from './services/Notification'
+import './App.css'
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState("a new note...");
   const [showAll, setShowAll] = useState();
-
+  const [errMessage,setErrMessage] = useState('have a error')
   //const url = "http://localhost:3001/notes";
 
   useEffect(() => {
@@ -92,12 +94,14 @@ const App = () => {
   // }
  
   return (
-    <div>
-      <h1>Notes</h1>
+    <div> 
 
+      <h1>Notes</h1>
+      
       <button onClick={() => setShowAll(!showAll)}>
         show {showAll ? "important" : "all"}
       </button>
+      {/* <Notification message = {errMessage}/> */}
       <ul>
         {notesShow &&
           notesShow.map((note) => (
