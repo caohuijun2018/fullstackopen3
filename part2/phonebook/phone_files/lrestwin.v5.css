@@ -1,0 +1,113 @@
+@font-face{font-family: 'iconfont';src: url('//js.699pic.com/css/font/iconfont.eot');src: url('//js.699pic.com/css/font/iconfont.eot?#iefix') format('embedded-opentype'), url('//js.699pic.com/css/font/iconfont.woff') format('woff'), url('//js.699pic.com/css/font/iconfont.ttf') format('truetype'), url('//js.699pic.com/css/font/iconfont.svg#iconfont') format('svg');}
+.iconfont{font-family:"iconfont" !important;font-size:16px;font-style:normal;-webkit-font-smoothing: antialiased;-webkit-text-stroke-width: 0.2px;-moz-osx-font-smoothing: grayscale;}
+.st-lregwin{display:none;position:fixed;width: 100%;height:100%;top:0;left:0;right: 0;bottom: 0;background: rgba(0,0,0,.6);z-index: 999;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);}
+.st-lregwin .mask-table{display: table;table-layout: fixed;height: 100%;width: 100%;}
+.st-lregwin .mask-table-cell{display: table-cell;height: 100%;width: 100%;vertical-align: middle;padding: 50px;}
+.st-lregwin .mask-member{width: 810px;height: 550px;background: #fff;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;-webkit-box-shadow: 1px 1px 50px rgba(0,0,0,.3);-moz-box-shadow: 1px 1px 50px rgba(0,0,0,.3);box-shadow: 1px 1px 50px rgba(0,0,0,.3);-webkit-animation: winAlertIn .4s;-o-animation: winAlertIn .4s;animation: winAlertIn .4s;margin-left: auto;margin-right: auto;position: relative;}
+.mask-member .member-hintList{height: 100%;width: 331px;color: #fff;background: url(//static.699pic.com/images/denglu-icon.png) no-repeat 0 0;box-sizing: border-box;padding-top: 107px;border-radius: 10px 0 0 10px;}
+.member-hintList li{position: relative;margin-bottom: 30px;}
+.member-hintList li i{position: absolute;top: 0;left: 30px;display: inline-block;width: 40px;height: 40px;border: 1px solid #fff;border-radius: 50%;text-align: center;line-height: 40px;font-size: 20px;}
+.member-hintList p{display: inline-block;font-size: 14px;line-height: 22px;margin-left: 80px;width: 230px;}
+.mask-member .close-btn{position: absolute;top: 15px;right: 15px;cursor: pointer;z-index: 2;transition: all 0.2;}
+.mask-member .close-btn:hover{color: #4497DF;}
+.mask-table .frame-box{position: absolute;top: 0;right: 0;width: 480px;height: 100%;background: #fff;border-radius:0 10px 10px 0;}
+.mask-member .mask-logo{display: block;width: 149px;height: 35px;background: url(//static.699pic.com/images/denglu-icon.png) no-repeat -340px -180px;margin: 50px auto 49.2px;}
+.mask-member .mask-hintXian{height: 0;border-top: 1px solid #DDDDDD;text-align: center;font-size: 14px;color: #999999;margin: 0 22px;}
+.mask-member .mask-hintXian span{position: relative;background: #fff;top: -10.5px;padding: 0 16px;}
+.mask-member .box-work{margin-top:81px;text-align: center;}
+.mask-member .box-work>a{display: inline-block;width: 140px;height: 170px;margin: 0 28px;vertical-align: top;}
+.mask-member .box-work dl{display: inline-block;width: 140px;height: 170px;}
+.mask-member .box-work .do-qqlogin{border: 1px solid #96CEFF;border-radius: 6px;color: #4497DF;font-size: 16px;transition: 0.2s;}
+.mask-member .box-work .do-qqlogin:hover{background: #4497DF;color: #fff;border: 1px solid #4497DF;}
+.mask-member .box-work .do-wxlogin:hover{background: #69B813;color: #fff;border: 1px solid #69B813;}
+.mask-member .box-work dt i{display: inline-block;padding-top: 36px;padding-bottom: 35px;font-size: 58px;}
+.mask-member .box-work .do-wxlogin{display: inline-block;width: 140px;height: 170px;text-align: center;border: 1px solid #93DC43;border-radius: 6px;color: #69B813;transition: 0.2s;}
+.mask-member .box-work .do-wxlogin img{width: 124px;height: 124px;margin-bottom: 4px;margin-top: 8px;vertical-align: top;}
+.mask-member .box-work dd{font-size:16px;}
+.frame-box .mask-link{position: absolute;top: 470px;right:20px;font-size: 14px;color: #4497DF;cursor: pointer;transition: 0.2s;}
+.frame-box .mask-link:hover{color: #337cbb;}
+.frame-box .mask-link i{font-size: 20px;vertical-align: -2.5px;}
+.frame-box .hint-bottom{position: absolute;bottom: 0;left: 0;width: 100%;height: 50px;box-sizing: border-box;line-height: 50px;background: #EFF1F5;padding: 0 20px;border-radius: 0 0 10px 0;}
+.frame-box .hint-bottom p{display: inline-block;font-size: 12px;color: #666;}
+.frame-box .hint-bottom a{color: #4497DF;padding: 0 5px;}
+.frame-box .hint-bottom a i{font-size: 20px;vertical-align: -2.5px;}
+.frame-box .hint-bottom a:hover{color: #337cbb;}
+.mask-member .mask-shexiaotuHint{position: absolute;left: 0px;top: 403px;height: 110px;font-size: 14px;text-align: center;box-sizing: border-box;padding: 26px 0 0 69px;background: url(//static.699pic.com/images/denglu-icon.png) no-repeat -466px -278px;}
+.mask-member .mask-shexiaotuHint p{position: relative;font-size: 18px;color: #4C3F3B;padding: 0 20px;height: 40px;line-height: 40px;background: #FFE87C;border-radius: 10px;}
+.mask-member .mask-shexiaotuHint p i{position: absolute;top: 18px;left: -10px;border: 4px solid #FFE87C;border-color: #FFE87C transparent transparent transparent;width: 2px;border-radius: 34px 0 0 0px;transform: skewY(-28deg);background: #FFE87C;}
+/*手机号注册*/
+.frame-box .form-cont{padding: 49px 0 0 65px;}
+.frame-box .form-cont .box-linetit{font-size: 14px;color: #999999;padding-bottom: 10px;}
+/*手机认证部分表单*/
+.st-lregwin .frame-box .form-cont .sure-btn{display:block;width:350px;height: 46px;line-height: 46px;text-align: center;color:#666;font-size: 20px;background: #ededed;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+.st-lregwin .frame-box .form-cont label{display:inline-block;position: relative;margin-bottom: 32px;}
+.st-lregwin .frame-box .form-cont label .form-put{height: 46px;padding:0 15px;color:#6c6c6c;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 4px;box-sizing: border-box;border: 1px solid #DDDDDD;border-radius: 4px;}
+.st-lregwin .frame-box .form-cont .sure-btn.sure-success{color:#fff;background: #269edc;box-shadow: 0 4px 0px #2D7DC1;}
+.st-lregwin .frame-box .form-cont .sure-btn.sure-success:hover{margin-top: 3px;box-shadow: 0 1px 0px #2D7DC1;}
+.st-lregwin .frame-box .form-cont .fd-tips{position: absolute;left: 0;bottom: -30px;}
+.st-lregwin .frame-box .form-cont .fd-tips .iconfont{color: #ff5002;display: inline-block;margin-right: 5px;text-align: center;line-height: 16px;font-size: 15px;border-radius: 50%;}
+.st-lregwin .frame-box .phonelreg-box{width: 180px;margin: 28px auto 34px;}
+.st-lregwin .frame-box .phonelreg-box .form-put{width: 168px;}
+.st-lregwin .frame-box .phonelreg-box label span{position: absolute;width: 100px;text-align: right;left: -120px;top:0;color: #6c6c6c;height: 36px;line-height: 36px;}
+.st-lregwin .frame-box .phonelreg-box label .sendma-btn{display: block;position: absolute;right: -10px;top:0;width: 118px;height: 34px;border: 1px solid #d8dce0;line-height: 34px;text-align: center;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ffffff',endColorStr='#f4f4f4',gradientType=0);background: -moz-linear-gradient(top, #ffffff, #f4f4f4);background: -o-linear-gradient(top,#ffffff, #f4f4f4);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#f4f4f4));}
+.st-lregwin .frame-box .phonelreg-box label .sendma-btn.actived{filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ededed',endColorStr='#ededed',gradientType=0);}
+.st-lregwin .frame-box .phonelreg-box .sure-btn{width:310px;}
+/*手机登录*/
+.st-lregwin .frame-box .phone-loginbox label{margin-bottom: 8px;}
+.st-lregwin .frame-box .phone-loginbox label .form-put{width: 350px;}
+.st-lregwin .frame-box .phone-loginbox .take-phoneregsit{position: absolute;right: 0;bottom:-36px;z-index: 1;}
+.st-lregwin .phone-login .box-center,.st-lregwin .phone-applogin .box-center{padding-top: 79px;}
+/*手机注册*/
+.st-lregwin .frame-box .phone-loginbox label .form-prove{width: 220px;}
+.st-lregwin .frame-box .phone-loginbox label .get-code{display: inline-block;width: 120px;height: 46px;line-height: 46px;box-sizing: border-box;text-align: center;border-radius: 2px;background-color: #ddd;font-size: 14px;color: #666;margin-left: 5px;}
+.st-lregwin .frame-box .phone-loginbox .job-way{font-size: 14px;color: #999;line-height: 28px;}
+.st-lregwin .frame-box .phone-loginbox .job-way label{display: inline-block;width: 95px;}
+.st-lregwin .frame-box .form-cont label .form-put.error-border{border:1px #ff5101 solid;}
+.st-lregwin .frame-box .error-ts{margin-top: 4px;margin-bottom: -4px;}
+.st-lregwin .frame-box .error-ts .tip-icon.error-icon{color: #ff5002;}
+.st-lregwin .frame-box .error-ts .tip-icon.success-icon{color: #67ca07;}
+.st-lregwin .frame-box .error-ts .tip-icon{display: inline-block;width: 16px;height: 16px;margin-right: 5px;text-align: center;line-height: 16px;font-size: 15px;border-radius: 50%;}
+.st-lregwin .frame-box .error-ts .ts-color{color: #ff5100;}
+/*手机认证*/
+.st-lregwin .frame-box .phonelreg-box.re-width{width: 300px;}
+.st-lregwin .frame-box .phonelreg-box .form-put.new-width{width: 298px;}
+.st-lregwin .frame-box .form-cont label{margin-bottom: 8px;}
+.st-lregwin .frame-box .phonelreg-box label .type-job{display: inline-block;width: 95px;height: 34px;line-height: 34px;}
+.st-lregwin .frame-box .phonelreg-box label .type-job input{vertical-align: middle;}
+.st-lregwin .frame-box .box-butm span a.do-phone-code-login{border-left: 2px #d5d5d5 solid;}
+.st-lregwin .frame-box .phone-loginbox label .get-code.click-border{background: #fbfeff;border:1px #3ba8df solid;color: #269edc;line-height: 44px;}
+.st-lregwin .frame-box .phonelreg-box .job-way{height: 34px;line-height: 34px;margin-bottom: 8px;position: relative;}
+.st-lregwin .frame-box .phonelreg-box .job-way span{position: absolute;top: 0px;left: -76px;}
+.st-lregwin .frame-box .phonelreg-box .job-way label{display: inline-block;width: 95px;}
+.st-lregwin .frame-box label .rightTubiao{position: absolute;right: 13px;top: 10px;font-size: 25px;color: #ccc;}
+/*动画*/
+.winAlertIn{-webkit-animation-name: winAlertIn;-moz-animation-name: winAlertIn;-o-animation-name: winAlertIn;animation-name: winAlertIn;-webkit-animation-duration: .4s;-moz-animation-duration: .4s;-o-animation-duration: .4s;animation-duration: .4s;}
+@-webkit-keyframes winAlertIn{0%{-webkit-transform: scale(.7);-moz-transform: scale(.7);-ms-transform: scale(.7);-o-transform: scale(.7);transform: scale(.7);}
+45%{-webkit-transform: scale(1.05);-moz-transform: scale(1.05);-ms-transform: scale(1.05);-o-transform: scale(1.05);transform: scale(1.05);}
+80%{-webkit-transform: scale(.95);-moz-transform: scale(.95);-ms-transform: scale(.95);-o-transform: scale(.95);transform: scale(.95);}
+100%{-webkit-transform: scale(1);-moz-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1);transform: scale(1);}}
+@keyframes winAlertIn{0%{-webkit-transform: scale(.7);-moz-transform: scale(.7);-ms-transform: scale(.7);-o-transform: scale(.7);transform: scale(.7);}
+45%{-webkit-transform: scale(1.05);-moz-transform: scale(1.05);-ms-transform: scale(1.05);-o-transform: scale(1.05);transform: scale(1.05);}
+80%{-webkit-transform: scale(.95);-moz-transform: scale(.95);-ms-transform: scale(.95);-o-transform: scale(.95);transform: scale(.95);}
+100%{-webkit-transform: scale(1);-moz-transform: scale(1);-ms-transform: scale(1);-o-transform: scale(1);transform: scale(1);}}
+.st-lregwin .member-hintList .slide-animation1,
+.st-lregwin .member-hintList .slide-animation2,
+.st-lregwin .member-hintList .slide-animation3,
+.st-lregwin .member-hintList .slide-animation4,
+.st-lregwin .member-hintList .slide-animation5{opacity: 0;transform: translateX(50px);}
+.st-lregwin.slideDown .member-hintList .slide-animation1,
+.st-lregwin.slideDown .member-hintList .slide-animation2,
+.st-lregwin.slideDown .member-hintList .slide-animation3,
+.st-lregwin.slideDown .member-hintList .slide-animation4,
+.st-lregwin.slideDown .member-hintList .slide-animation5{opacity: 1;transform: translateX(0px);}
+.st-lregwin.slideDown .member-hintList .slide-animation1{transition: all .5s ease-in-out 0.4s;}
+.st-lregwin.slideDown .member-hintList .slide-animation2{transition: all .5s ease-in-out 0.9s;}
+.st-lregwin.slideDown .member-hintList .slide-animation3{transition: all .5s ease-in-out 1.4s;}
+.st-lregwin.slideDown .member-hintList .slide-animation4{transition: all .5s ease-in-out 1.9s;}
+.st-lregwin.slideDown .member-hintList .slide-animation5{transition: all .5s ease-in-out 2.4s;}
+
+
+
+.geetest_radar_tip span{position: static!important;}
+.click-border{background: #fbfeff;border: 1px #3ba8df solid!important;color: #269edc;}
+.no-click {background:#ddd!important;cursor:default;}

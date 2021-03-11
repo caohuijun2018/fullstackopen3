@@ -1,0 +1,19 @@
+/* 视频企业图标 */
+.companyVideo{width: 16px;height: 14px;background: url("//static.699pic.com/images/video/user-diamond.png") no-repeat;position: absolute;bottom: 4px;right: -2px;background-position: -306px -82px;}
+.companyVideo-medium{display: inline-block;width: 25px;height: 20px;background: url("//static.699pic.com/images/video/user-diamond.png") no-repeat;background-position: -306px -57px;}
+/* 音乐图标 */
+.yinyuevipNo,.yinyuevip,.yinyuevipZs,.yinyuevipNo-medium,.yinyuevip-medium,.yinyuevipZs-medium,.yinyuevipNo-size,.yinyuevip-size,.yinyuevipZs-size,.yinyuevip49,.yinyuevip49-medium,.yinyuevip49-size,.videovipNo49,.videovipNo49-medium,.videovipNo49-size,.videovip50,.videovip50-medium,.videovip50-size{display: inline-block;background: url(//static.699pic.com/images/common/vipicon9.png) no-repeat ;}
+.yinyuevipNo{width: 16px;height: 14px;background-position: -1892px -82px;}
+.yinyuevip{width: 16px;height: 14px;background-position: -1936px -82px;}
+.yinyuevipZs{width: 16px;height: 17px;background-position: -1980px -79px;}
+.yinyuevip49{width: 16px;height: 14px;background-position: -2112px -82px;}
+.videovipNo49{width: 16px;height: 14px;background-position: -2156px -82px;}
+.videovip50{width: 16px;height: 14px;background-position: -2200px -82px;}
+.yinyuevipNo-medium{width: 23px;height: 20px;background-position: -1892px -56px;}
+.yinyuevip-medium{width: 23px;height: 20px;background-position: -1936px -56px;}
+.yinyuevipZs-medium{width: 23px;height: 25px;background-position: -1980px -51px;}
+.yinyuevip49-medium{width: 23px;height: 20px;background-position: -2112px -56px;}
+.yinyuevipNo-size{width: 44px;height: 37px;background-position: -1892px -10px;}
+.yinyuevip-size{width: 44px;height: 37px;background-position: -1936px -10px;}
+.yinyuevipZs-size{width: 44px;height: 47px;background-position: -1980px 0px;}
+.yinyuevip49-size{width: 44px;height: 37px;background-position: -2112px -10px;}
