@@ -1,0 +1,18 @@
+
+
+GET http://localhost:3001/api/notes/1
+
+###
+
+POST http://localhost:3001/api/notes HTTP/1.1
+Content-Type: application/json;
+
+{
+    
+        "content": "This is first",
+        "date": "2019-05-30T17:30:31.098Z",
+        "important": true
+     
+      
+}
+  

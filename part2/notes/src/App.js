@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Note from "./components/Node";
+import Note from "./components/Note";
 //import axios from "axios";
 import noteServices from "./services/note";
 import Notification from './services/Notification'
@@ -8,7 +8,7 @@ const App = () => {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState("a new note...");
   const [showAll, setShowAll] = useState();
-  const [errMessage,setErrMessage] = useState('have a error')
+  const [errMessage,setErrMessage] = useState('have a error ...')
   //const url = "http://localhost:3001/notes";
 
   useEffect(() => {
@@ -83,8 +83,11 @@ const App = () => {
         setNotes(notes.map((note) => (note.id !== id ? note : initialNote)));
       })
       .catch((error) => {
-        alert(`the note '${note.content}' was already deleted from server`);
+        setErrMessage(`the note '${note.content}' was already deleted from server`);
 
+        setTimeout(() => {
+          setErrMessage(null)
+        }, 5000);
         setNotes(() => note.filter((note) => note.id !== id));
       });
   };
@@ -97,7 +100,7 @@ const App = () => {
     <div> 
 
       <h1>Notes</h1>
-      
+      <Notification message = {errMessage}/>
       <button onClick={() => setShowAll(!showAll)}>
         show {showAll ? "important" : "all"}
       </button>

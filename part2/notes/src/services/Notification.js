@@ -1,9 +1,10 @@
-const Notification = message => {
+import '../App.css'
+const Notification = ({message}) => {
     if(message === null){
         return null;
     }
     return (
-        <div classname = 'error'>
+        <div className = 'error'>
             {message}
         </div>
     )
