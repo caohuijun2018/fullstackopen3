@@ -1,6 +1,7 @@
 import axios from "axios";
-const basrUrl = "http://localhost:3001/persons";
 
+//const basrUrl = "http://localhost:3001/persons";
+const basrUrl = "api/persons";
 // const getAll = () => {
 //   axios.get(basrUrl).then((response) => {
 //     return response.data;

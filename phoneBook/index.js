@@ -1,7 +1,11 @@
 const { response, request } = require('express');
 const express = require('express');
 const app = express();
+const cors = require('cors');
+app.use(cors());
 app.use(express.json())
+app.use(express.static('build'))
+
 let  phoneBook  = [
     {
         id:1,
