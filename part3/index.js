@@ -2,6 +2,9 @@
 const { response, request } = require('express')
 const express  = require('express')
 const cors = require('cors');
+//在导入Note模块之前导入dotenv，保证是全局可用的
+require('dotenv').config()
+const Note = require('./note')
 const app = express()
 app.use(express.static('build'))
 
@@ -23,6 +26,12 @@ app.use(express.json()) //中间件，中间件是可以用来处理请求和相
 //   })
 // }
 // app.use(unknownEndpoint);
+
+//后端连接到数据库
+
+
+// const Note = mongoose.model('Note',noteSchema)
+
 
 let notes = [
     {
@@ -52,12 +61,18 @@ app.get('/',(request,response) => {
     response.send('<h1>Hello World</h1>')
 })
 app.get('/api/notes',(request,response) => {
-    response.json(notes)
+    //response.json(notes)
+    Note.find({}).then(notes => {
+      response.json(notes)
+    })
 })
 app.get('/api/notes/:id', (request, response) => {
-    const id = Number(request.params.id)
-    const note = notes.find(note => note.id === id)
-    response.json(note)
+    // const id = Number(request.params.id)
+    // const note = notes.find(note => note.id === id)
+    // response.json(note)
+    Note.findById(request.params.id).then(note => {
+      response.json(note)
+    })
   })
 
   app.delete('/api/notes/:id', (request, response) => {
@@ -83,16 +98,20 @@ app.get('/api/notes/:id', (request, response) => {
       })
     }
   
-    const note = {
+    const note =  new Note({ //创建note为Note的实例
       content: body.content,
       important: body.important || false,
       date: new Date(),
       id: generateId(),
-    }
+    })
     console.log(note)
-    notes = notes.concat(note)
+    // notes = notes.concat(note)
   
-    response.json(note)
+    // response.json(note)
+    
+    note.save().then(savedNote => {
+      response.json(savedNote)
+    })
   })
   const PORT = process.env.PORT || 3002
 app.listen(PORT)
