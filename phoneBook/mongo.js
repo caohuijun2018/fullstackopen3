@@ -23,13 +23,13 @@ const person = new Person({
     number: personNumber
 })
 
-person.save().then(result => {
-    console.log('person saved!')
-    mongoose.connection.close()
-})
-// Person.find({}).then(result => {
-//     result.forEach(person => {
-//         console.log(person);
-//     })
+// person.save().then(result => {
+//     console.log('person saved!')
 //     mongoose.connection.close()
 // })
+Person.find({}).then(result => {
+    result.forEach(person => {
+        console.log(person);
+    })
+    mongoose.connection.close()
+})

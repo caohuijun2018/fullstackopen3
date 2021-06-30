@@ -1,10 +1,13 @@
 const { response, request } = require('express');
-const express = require('express');
+const express = require('express')
+require('dotenv').config()
 const app = express();
 const cors = require('cors');
 app.use(cors());
 app.use(express.json())
 app.use(express.static('build'))
+
+const Person = require('./phoneBook')
 
 let  phoneBook  = [
     {
@@ -24,7 +27,9 @@ let  phoneBook  = [
     }
 ]
 app.get('/api/persons' ,(request,response) => {
-    response.json(phoneBook)
+    Person.find({}).then(result => {
+        response.json(result)
+    })
 })
 app.get('/info',(request,response) => {
     let time = new Date();
@@ -32,13 +37,16 @@ app.get('/info',(request,response) => {
 })
 
 app.get('/api/persons/:id',(request,response) => {
-    let id = Number(request.params.id);
-    let phonebook = phoneBook.find(phone => phone.id === id);
-    if(phonebook === null) {
-        response.status(404).end();
-    } else {
-        response.json(phonebook)
-    }
+    // let id = Number(request.params.id);
+    // let phonebook = phoneBook.find(phone => phone.id === id);
+    // if(phonebook === null) {
+    //     response.status(404).end();
+    // } else {
+    //     response.json(phonebook)
+    // }
+    Person.findById(request.params.id).then(resultPerson => {
+        response.json(resultPerson)
+    })
 })
 
 app.delete('/api/persons/:id',(request,response) => {
@@ -61,14 +69,18 @@ app.post('/api/persons',(request,response) => {
             error: 'name must be unique'
         })
     }
-    let newPerson = {
+    let newPerson =  new Person ({
         id: Math.floor( Math.random() * 10000),
         name : body.name,
         number: body.number
 
-    }
-    phoneBook = phoneBook.concat(newPerson)
-    response.json(phoneBook)
+    })
+    // phoneBook = phoneBook.concat(newPerson)
+    // response.json(phoneBook)
+
+    newPerson.save().then(savePerson => {
+        response.json(savePerson)
+    })
 })
 
 
